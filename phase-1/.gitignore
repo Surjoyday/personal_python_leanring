@@ -24,20 +24,27 @@ var/
 *.egg
 MANIFEST
 
-# Poetry
-poetry.lock
-*.venv/
-.venv/
-
-# Virtualenv
+# Virtual environments
 venv/
+.venv/
 ENV/
 env/
+.env/
 env.bak/
 venv.bak/
 
-# Pytest
-.pytest_cache/
+# Poetry
+poetry.lock
+poetry.toml
+
+# PyInstaller
+#  Usually these files are written by a python script from a template
+*.manifest
+*.spec
+
+# Installer logs
+pip-log.txt
+pip-delete-this-directory.txt
 
 # Unit test / coverage reports
 htmlcov/
@@ -50,6 +57,7 @@ nosetests.xml
 coverage.xml
 *.cover
 .hypothesis/
+.pytest_cache/
 
 # Jupyter Notebook
 .ipynb_checkpoints
@@ -65,5 +73,8 @@ dmypy.json
 # Pyre type checker
 .pyre/
 
-# VS Code
-.vscode/
+# pytype
+.pytype/
+
+# Cython debug symbols
+cython_debug/
