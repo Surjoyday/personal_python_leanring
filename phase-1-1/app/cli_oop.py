@@ -1,5 +1,4 @@
-import argparse
-import sys  # Import the argparse module for command-line argument parsing
+import argparse # Import the argparse module for command-line argument parsing
 from app import calculator_oop as cls  # Import calculator class from another file    
 
 def main():

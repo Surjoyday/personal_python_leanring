@@ -47,7 +47,7 @@ def main():
         else:
             print("Unknown command.")  # Handle unknown command
             return
-    except ZeroDivisionError as e:
+    except ValueError as e:
         print(e)  # Print error if division by zero occurs
         return
 
