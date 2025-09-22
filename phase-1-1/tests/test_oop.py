@@ -1,6 +1,13 @@
 import pytest
 from app.calculator_oop import Calculator
 
+
+"""
+Pytest fixture that provides an instance of the Calculator class for use in tests.
+
+A fixture in pytest is a reusable piece of code that helps set up necessary objects or state before running tests. 
+It allows you to share setup code across multiple test functions, making your tests cleaner and more maintainable.
+"""
 @pytest.fixture
 def calculator():
     return Calculator()

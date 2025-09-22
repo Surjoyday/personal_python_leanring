@@ -9,19 +9,19 @@ def main():
 
     subparsers = parser.add_subparsers(dest="cmd", required=True, help="Available operations")
 
-    add_parser = subparsers.add_parser("add", help="Add two numbers")
+    add_parser = subparsers.add_parser("add",aliases=["plus", "+"], help="Add two numbers")
     add_parser.add_argument("a", type=float, help="First number")  # First
     add_parser.add_argument("b", type=float, help="Second number")  # Second number argument
 
-    subtract_parser = subparsers.add_parser("subtract", help="Subtract two numbers")
+    subtract_parser = subparsers.add_parser("subtract", aliases=["sub", "-"], help="Subtract two numbers")
     subtract_parser.add_argument("a", type=float, help="First number")  # First number argument
     subtract_parser.add_argument("b", type=float, help="Second number")  # Second number argument
 
-    multiply_parser = subparsers.add_parser("multiply", help="Multiply two numbers")
+    multiply_parser = subparsers.add_parser("multiply", aliases=["mul", "*"], help="Multiply two numbers")
     multiply_parser.add_argument("a", type=float, help="First number")  # First
     multiply_parser.add_argument("b", type=float, help="Second number")  # Second number argument
 
-    divide_parser = subparsers.add_parser("divide", help="Divide two numbers")
+    divide_parser = subparsers.add_parser("divide", aliases=["div", "/"], help="Divide two numbers")
     divide_parser.add_argument("a", type=float, help="First number")  # First
     divide_parser.add_argument("b", type=float, help="Second number")  # Second
 
@@ -30,13 +30,13 @@ def main():
     calculator = cls.Calculator()  # Create an instance of the Calculator class
 
     try:
-        if args.cmd == "add":
+        if args.cmd == "add" or args.cmd == "plus" or args.cmd == "+":
             result = calculator.add(args.a, args.b)  # Call add method
-        elif args.cmd == "subtract":
+        elif args.cmd == "subtract" or args.cmd == "sub" or args.cmd == "-":
             result = calculator.subtract(args.a, args.b)  # Call subtract method
-        elif args.cmd == "multiply":
+        elif args.cmd == "multiply" or args.cmd == "mul" or args.cmd == "*":
             result = calculator.multiply(args.a, args.b)  # Call multiply method
-        elif args.cmd == "divide":
+        elif args.cmd == "divide" or args.cmd == "div" or args.cmd == "/":
             result = calculator.divide(args.a, args.b)  # Call divide method
         else:
             print("Unknown command.")  # Handle unknown command
