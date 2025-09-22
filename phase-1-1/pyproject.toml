@@ -8,7 +8,9 @@ authors = [
 readme = "README.md"
 requires-python = ">=3.12"
 dependencies = [
-    "openai (>=1.108.1,<2.0.0)"
+    "openai (>=1.108.1,<2.0.0)",
+    "requests (>=2.32.5,<3.0.0)",
+    "python-dotenv (>=1.1.1,<2.0.0)"
 ]
 
 [tool.poetry]
@@ -19,6 +21,7 @@ packages = [
 [tool.poetry.scripts]
 calc-func = "app.cli_func:main"
 calc-oop = "app.cli_oop:main"
+chat-bot = "app.cli_chat_bot:main"
 
 
 [build-system]
